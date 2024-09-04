@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,22 +9,23 @@ class Program
     static void Main(string[] args)
     {
         Console.Write("Enter the directory path to scan: ");
-string directory = Console.ReadLine() ?? string.Empty;
+        string directory = Console.ReadLine() ?? string.Empty;
 
-if (string.IsNullOrWhiteSpace(directory))
-{
-    Console.WriteLine("No directory path provided.");
-    return;
-}
+        if (string.IsNullOrWhiteSpace(directory))
+        {
+            Console.WriteLine("No directory path provided.");
+            return;
+        }
 
-if (Directory.Exists(directory))
-{
-    GenerateReport(directory);
-}
-else
-{
-    Console.WriteLine("Invalid directory path.");
-}
+        if (Directory.Exists(directory))
+        {
+            GenerateReport(directory);
+        }
+        else
+        {
+            Console.WriteLine("Invalid directory path.");
+        }
+    }
 
     static void GenerateReport(string directory)
     {
@@ -74,6 +75,12 @@ else
         Console.WriteLine("- Music");
         Console.WriteLine("- Archives");
         Console.WriteLine("- Miscellaneous");
+
+        Console.WriteLine("\nDo you want to organize files into the suggested folder structure? (Y/N)");
+        if (Console.ReadLine()?.Trim().ToUpper() == "Y")
+        {
+            OrganizeFiles(directory, fileTypes);
+        }
     }
 
     static string GetFileHash(string filepath)
@@ -87,5 +94,44 @@ else
             }
         }
     }
+
+    static void OrganizeFiles(string sourceDirectory, Dictionary<string, List<string>> fileTypes)
+    {
+        string baseDirectory = Path.Combine(sourceDirectory, "Organized_Files");
+        Directory.CreateDirectory(baseDirectory);
+
+        Dictionary<string, string> categoryMap = new Dictionary<string, string>
+        {
+            {".doc", "Documents"}, {".docx", "Documents"}, {".pdf", "Documents"}, {".txt", "Documents"},
+            {".jpg", "Images"}, {".jpeg", "Images"}, {".png", "Images"}, {".gif", "Images"},
+            {".mp4", "Videos"}, {".avi", "Videos"}, {".mov", "Videos"},
+            {".mp3", "Music"}, {".wav", "Music"}, {".flac", "Music"},
+            {".zip", "Archives"}, {".rar", "Archives"}, {".7z", "Archives"}
+        };
+
+        foreach (var fileType in fileTypes)
+        {
+            string extension = fileType.Key;
+            string category = categoryMap.ContainsKey(extension) ? categoryMap[extension] : "Miscellaneous";
+            string categoryPath = Path.Combine(baseDirectory, category);
+            Directory.CreateDirectory(categoryPath);
+
+            foreach (string filePath in fileType.Value)
+            {
+                string fileName = Path.GetFileName(filePath);
+                string destPath = Path.Combine(categoryPath, fileName);
+                try
+                {
+                    File.Move(filePath, destPath);
+                    Console.WriteLine($"Moved: {filePath} -> {destPath}");
+                }
+                catch (IOException ex)
+                {
+                    Console.WriteLine($"Error moving {filePath}: {ex.Message}");
+                }
+            }
+        }
+
+        Console.WriteLine("File organization complete.");
     }
-    }
+}

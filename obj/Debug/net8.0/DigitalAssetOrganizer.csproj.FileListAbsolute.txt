@@ -1,0 +1,15 @@
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\bin\Debug\net8.0\DigitalAssetOrganizer.exe
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\bin\Debug\net8.0\DigitalAssetOrganizer.deps.json
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\bin\Debug\net8.0\DigitalAssetOrganizer.runtimeconfig.json
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\bin\Debug\net8.0\DigitalAssetOrganizer.dll
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\bin\Debug\net8.0\DigitalAssetOrganizer.pdb
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\obj\Debug\net8.0\DigitalAssetOrganizer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\obj\Debug\net8.0\DigitalAssetOrganizer.AssemblyInfoInputs.cache
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\obj\Debug\net8.0\DigitalAssetOrganizer.AssemblyInfo.cs
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\obj\Debug\net8.0\DigitalAssetOrganizer.csproj.CoreCompileInputs.cache
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\obj\Debug\net8.0\DigitalAssetOrganizer.sourcelink.json
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\obj\Debug\net8.0\DigitalAssetOrganizer.dll
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\obj\Debug\net8.0\refint\DigitalAssetOrganizer.dll
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\obj\Debug\net8.0\DigitalAssetOrganizer.pdb
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\obj\Debug\net8.0\DigitalAssetOrganizer.genruntimeconfig.cache
+C:\Users\90537\Desktop\DigitalAssetOrganizer\DigitalAssetOrganizer\obj\Debug\net8.0\ref\DigitalAssetOrganizer.dll
